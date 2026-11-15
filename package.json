@@ -9,7 +9,8 @@
     "lint": "vp lint",
     "check": "vp check",
     "test": "vp test",
-    "preview": "vp preview"
+    "preview": "vp preview",
+    "prepare": "vp config"
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -25,13 +26,14 @@
     "@vitejs/plugin-react": "^6.1.2",
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
-    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0",
-    "vite-plus": "1.6.0"
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
   },
-  "packageManager": "pnpm@12.14.0",
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.21.0",
+      "onFail": "download"
     }
   }
 }
