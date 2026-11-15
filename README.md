@@ -35,15 +35,17 @@ A recipe that breaks any of these fails loudly, naming the file, the moment the 
 ## Development
 
 ```bash
-npm install
-npm run dev      # local dev server
-npm test         # parser unit tests
-npm run check    # format, lint and type-check
-npm run build    # type-check, then build to dist/
-npm run preview  # serve dist/ locally
+pnpm install
+pnpm dev      # local dev server
+pnpm test     # parser unit tests
+pnpm check    # format, lint and type-check
+pnpm build    # type-check, then build to dist/
+pnpm preview  # serve dist/ locally
 ```
 
-All scripts call the project-local `vp`; no global CLI is required.
+pnpm is the package manager, pinned to 12.14.0 in `package.json`. All scripts call the
+project-local `vp`, so no global Vite+ CLI is required. `vp install` works too — it delegates to
+pnpm here.
 
 ## Deploying
 
